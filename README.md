@@ -1,3 +1,3 @@
 # fragment-of-future
 
-.
+..
