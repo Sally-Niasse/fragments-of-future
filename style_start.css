@@ -37,7 +37,7 @@ h2{
 }
 
 
-/* ajout */
+/* Connexion */
 .background{
     left: 0;
     top: 0;
@@ -117,6 +117,7 @@ input[type=submit]{
     color: #FFFCFC;
     font-size: 1.3rem;
     margin-top: 3%;
+    cursor: pointer;
 }
 form a{
     text-decoration: underline;
@@ -128,3 +129,8 @@ form a:hover{
     color: #000;
 }
 
+/*Reset mot de passe*/
+.reset{
+    text-decoration: none !important;
+    color: black !important;
+}

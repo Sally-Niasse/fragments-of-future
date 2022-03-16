@@ -7,4 +7,10 @@
     $(".close-button").on("click", function(){
         $(".vision").fadeOut(1000)
     })
+    $(".reset").hide();
+    $("#reinitialiser").click(function(){
+        $(".reset").fadeIn(500);
+    });
+
+    
  });
