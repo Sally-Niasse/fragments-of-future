@@ -1,0 +1,245 @@
+/*Ajout de class récit vide pour cibler */
+::-webkit-scrollbar{
+    opacity: 0;
+}
+
+:root {
+    --violet:#988AA8;
+    --grisViolet:#716F6F;
+    --crème:#F6E3CF;
+}
+
+body, html{
+    overflow: hidden;
+    max-height: 100vh; 
+    scroll-behavior: smooth;
+
+}
+ 
+body{
+    margin: 0;
+    margin-top: 0;
+    font-family: 'Ropa Sans', sans-serif;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+/* Navigation menu */
+nav{
+    width: 33.333%;
+    background-color:var(--violet);
+    height: 100vh;
+}
+h2{
+    margin: 15%;
+    font-size: 1.8rem;
+    text-align: center;
+}
+h3{
+    margin-top: 5%;
+text-align: center;
+font-size: 1.5rem;
+}
+
+.background{
+    background-color: royalblue;
+    width: 77%;
+}
+
+.charactersCard {
+    background-color: var(--crème);
+    margin-left:10%;
+    margin-right:10%;
+    padding-top:3%;
+}
+
+.charactersCard::after {
+    content :"";
+    background-color: var(--violet) !important;
+    background:url('img/bg/scratch_paper.png');
+    background-size:cover;
+    width:100%;
+    height:60px;
+    display: block;
+}
+
+.charactersCard hr {
+    border:.7px solid black;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.circle{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.pnj{
+    border-radius: 50%;
+    background-color: var(--grisViolet);
+    width: 17%;
+    margin:7%
+ 
+}
+.setting{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-around;
+    height:6vh ;
+}
+
+.setting img {
+    width: 25px;
+    height: 25px;
+}
+/*Espace de jeu*/
+.gamespace{
+    width: 77%;
+    background-image: url("img/bg/classe.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+ .bubbleLiam{
+    display:inline-flex;
+    width: 70%;
+    margin-left: 30%;
+    margin-bottom: 2%;
+
+ }
+ .bubbleChoice{
+   width: 40vw;
+   display: flex;
+   margin-right: auto;
+   margin-left: auto;
+}
+ .bubbleChoice .content{
+    width: 100%;
+}
+.bubbleChoice a{
+    color: black;
+    text-decoration: none;
+}
+
+.bubbleChoice p:hover{
+  background-color: #f5cf52;
+  transition: ease-in 500ms;
+  color: white;
+}
+.bubbleChoice p{
+    width: 50%;
+    background-color: #F6E3CF;
+    padding: 4%;
+    text-align: center; 
+    transition: ease-out 500ms;
+    border-radius: 10px 3px 10px 3px;
+}
+input[submit]{
+background-color: none;
+border: 0;
+margin: 0;
+
+}
+ .bubbleRandom{
+    display:inline-flex;
+    width: 70%;
+    margin-right: 30%;
+    margin-bottom: 2%;
+
+ }
+ .bubbleRandom p{    /*A concatener avec le bubblLiam p */
+    width: 70%;
+    background-color: #F6E3CF;
+    padding: 1%;
+    text-align: justify;
+    height: fit-content;
+    border-radius: 8px 0px 8px 8px;
+
+    
+}
+.random_pdp{
+    border-radius: 50%;
+    background-color: #716F6F;
+    margin-left :4vw;
+    width: 7vw;
+    height: 14vh;
+    order:-1;
+}
+.content{
+    /* border: red 3px solid; */
+    max-height:25vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liam_pdp{
+    border-radius: 50%;
+    background-color: #716F6F;
+    margin-right :4vw;
+    width: 7vw;
+    height: 14vh;
+}
+ .bubbleLiam p{ 
+    width: 70%;
+    background-color: #F6E3CF;
+    padding: 2%;
+    text-align: right;
+    border-radius: 8px 0px 8px 8px;
+ }
+ .didascalie, .chapter{
+     text-align: center;
+     font-style: italic;
+     margin: auto;
+     color: #F6E3CF;
+     width: 50%;
+     height: fit-content;
+     background-color: #988AA8;
+
+ }
+ .chapter{
+    font-weight: bold;
+    font-size: 2rem;
+ }
+ /* Modal vision*/
+ .vision{
+     display: none;
+     position: absolute;
+     width: 70%;
+     height: 100%;
+     background-color: rgba(0,0,0,0.6);
+     top:0px;
+     right: 0px;
+     transition: ease-in-out 200ms;
+     transform: scale(1);
+
+ }
+ button{
+     background: none;
+     border: none;
+     color: white;
+     font-size: 2.5rem;
+     cursor: pointer;
+ }
+ .vision img{
+     width: 70%;
+     text-align: center;
+     transform: translate(20%,5%) scale(1);
+ }
+ .close-button{
+     position: absolute ;
+     top: 2%;
+     left: 2%;
+ }
+ .delegue, .danseur, .nanji{
+     display: none;
+ }
