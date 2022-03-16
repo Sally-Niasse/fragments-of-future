@@ -34,7 +34,7 @@
 
  // Deuxième requête : Récupréation des données par rapport à la table des redirections et selon le nombre de résultat afficher des choix
   $reqchoix = "SELECT suivant.suiv, recit.id_recit, recit.texte, recit.type FROM suivant, recit WHERE recit.id_recit = suivant.suiv AND preced=". $id_suivant;
-  $reqchoix = $bdd -> query($reqchoix);
+  $reqchoix = $bdd -> prepare($reqchoix);
   $reqchoix -> execute();
     if($reqchoix->rowcount()>1){ 
       foreach($reqchoix as $choix){

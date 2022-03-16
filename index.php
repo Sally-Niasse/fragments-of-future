@@ -42,14 +42,13 @@
 
     <div class="setting">
         <a href="deconnexion.php"><img src="img/logo/log-out.png" alt=""></a>
-        <img src="img/logo/speaker-filled-audio-tool.png" alt="">
         <a href="https://www.instagram.com/fragmentsoffuture/?hl=fr" target="_blank"><img src="img/logo/instagram.png" alt=""></a>
     </div>
   </nav>
   <div id="gamespace" class="gamespace">
       <div class="bubbleLiam recit" id="" data-suiv="<?php echo $_SESSION["save"] ?>" style="display: none;">
         <div class="content">
-          <p>hey</p>
+          <p>Départ</p>
           <img class="liam_pdp" src="img/perso/liam.png" alt="">
         </div>
     </div>

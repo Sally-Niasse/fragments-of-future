@@ -77,7 +77,7 @@
             <form action="inscription_traitement.php" method="POST">  
                 <img src="img/logo/fof_logo_final_long_black.png" alt="">
                 <div class="form-group2">
-                    <input type="text" name="login" class="form-control" placeholder="Login" required="required" autocomplete="off">
+                    <input type="mail" name="mail" class="form-control" placeholder="Email" required="required" autocomplete="off">
                 </div>
                 <div class="form-group2">
                     <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
