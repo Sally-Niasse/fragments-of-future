@@ -11,6 +11,11 @@
     $("#reinitialiser").click(function(){
         $(".reset").fadeIn(500);
     });
+    $("#close-menu").on("click", function(){
+        $("nav").css("left","0%");
+        $("#close-menu").html("&times;")
+    })
+
 
     
  });

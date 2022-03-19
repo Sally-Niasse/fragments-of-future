@@ -20,13 +20,15 @@
   <?php
   include("config.php");
   session_start();
-  // Si j'arrive pour la première fois donc save=0/1
   if (isset($_SESSION["login"])) { ?>
 
 
     <div class="container">
-      <nav>
-        <h2>Fragments of Future</h2> <!-- a terme une image-->
+    <button id="close-menu" class="close-button">&equiv;</button>   
+      <nav>     
+        
+        <img id="logonav" src="img/logo/fof_logo_final_long_black.png" alt="">
+        <div class="charactersCard">
         <h3>Personnages rencontrés</h3>
         <div class="circle">
           <div class="fiche">
@@ -66,13 +68,14 @@
             <p>Alice <br> Camarade</p>
           </div>
         </div>
-
+        </div>
         <div class="setting">
           <a href="deconnexion.php"><img src="img/logo/log-out.png" alt=""></a>
           <a href="https://www.instagram.com/fragmentsoffuture/?hl=fr" target="_blank"><img src="img/logo/instagram.png" alt=""></a>
         </div>
       </nav>
       <div id="gamespace" class="gamespace">
+        <div class="burger"></div>
         <div class="start recit" id="" data-suiv="<?php echo $_SESSION["save"] ?>">
             <p>Pour suivre l'histoire, cliquez sur l'écran et une bulle de dialogue apparaîtra. Lorsque que plusieurs bulles appraissent les unes à côté des autres, ce sont des choix.  Sélectionnez-en une pour prendre l'embranchement de votre choix.<br> Amusez vous bien !</p>
         </div>
@@ -91,6 +94,7 @@
           <button id="close-btn" class="close-button">&times;</button>
           <img src="img/vision/nanji.jpg" alt="">
         </div>
+      </div>
       </div>
 
       <script>
@@ -132,7 +136,7 @@
 
           $.get("affichage.php", {
               "id_suivant": id_suivant
-            }, "json") //Version réduite de $.ajax(type:get, etc)
+            }, "json")
             //Ce code sera exécuté en cas de succès - La réponse du serveur est passée à done()
             .done(function(message) {
               // ajoute bloc (message){} soit 2.
@@ -152,10 +156,19 @@
 
               //changement des BG en fonction des ids
             
-              if (id == 5){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/classe.jpg')";
-                document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-              }
+              // if (id <5){
+              //   document.querySelector(".gamespace").style.backgroundImage="url('img/bg/chambre.jpg')";
+              //   console.log("chambre de Liam");
+              //   console.log(id)
+              // }
+              // if (id > 6 && id <= 24 ){
+              //   document.querySelector(".gamespace").style.backgroundImage="url('img/bg/classe.jpg')";
+              //   // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+              //   console.log("salle de classe")
+              //   console.log(id)
+
+
+              // }
               // if (id == 3){
               //   document.querySelector(".gamespace").style.backgroundImage="url('img/bg/toilette.jpg')";
               //   document.querySelector(".gamespace").style.transition="ease-in-out 100ms"

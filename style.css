@@ -29,11 +29,21 @@ body{
 }
 
 /* Navigation menu */
+#close-menu{
+    display: none;
+    transition: ease-in-out 400ms;
+}
 nav{
     width: 33.333%;
     background-color:var(--violet);
     height: 100vh;
 }
+#logonav{
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 h2{
     margin: 15%;
     font-size: 1.8rem;
@@ -52,8 +62,8 @@ font-size: 1.5rem;
 
 .charactersCard {
     background-color: var(--crème);
-    margin-left:10%;
-    margin-right:10%;
+    margin-left:5%;
+    margin-right:5%;
     padding-top:3%;
 }
 
@@ -78,13 +88,14 @@ font-size: 1.5rem;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
+    align-items: flex-start;
 
 }
 .pnj{
     border-radius: 50%;
     background-color: var(--grisViolet);
     height: auto;
-    width: 40%;
+    width: 50%;
     margin:auto;
  
 }
@@ -100,8 +111,10 @@ font-size: 1.5rem;
 }
 .fiche p{
     text-align: center;
+    font-size: 1rem;
 }
 .setting{
+    position: relative;
     display: flex;
     width: 100%;
     align-items: flex-end;
@@ -266,10 +279,32 @@ input[submit]{
 
 
  /* Media queries */
+ @media screen and (max-width: 1000px) {
+     #logonav{
+         width: 60%
+     }
+    .pnj{
+        width: 70%;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    
+ }
 
   @media screen and (max-width: 800px) { /*tablette*/
+    #close-menu{
+        display: block !important;
+        text-align: left;
+        transition: ease-in-out 400ms;
+        font-size: 1.5rem;
+        z-index: 9;
+    }
     nav {
-      display: none;
+        position: absolute;
+        top: 0;
+        left:-34%;
+        transition: ease-in-out 500ms;
     }
     .gamespace{
         width: 100%;

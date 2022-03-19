@@ -51,7 +51,7 @@ include("config.php");
 ?> 
 <div class="background">
     <div class="container">
-    <a href="accueil.php"><button class="retour">&larr;</button><a> 
+    <a href="accueil.php"><button class="retour">&larr;</button></a> 
         <form action="connexion.php" method="POST">
             <img src="img/logo/fof_logo_final_long_black.png" alt="">
         <div class="form-group">
@@ -71,12 +71,14 @@ include("config.php");
     </div>
 </div>
         <header>
+        <div class="fof">
                 <img src="img/logo/fof_logo_final_long_black.png" alt="">
                 <a href="#" id="start">Commencer l'aventure</a>
-        </header>
+        </div>
         <aside>
        <p> Se réveiller en retard, devoir courir pour se préparer et arriver en retard à l’école, c’est une situation qui est arrivée à tout le monde. Mais, dans la même journée, utiliser sa capacité d’observer des bribes du futur pour se faire élire délégué de sa classe, c’est beaucoup moins commun. C’est pourtant la journée de Liam, qui doit apprendre à manier son nouveau don de prémonition pour aider ses camarades de classe.</p>
        <p>Vous devrez guider Liam dans ses choix. A travers les visions et les interactions que vous avez avec les personnages, déduisez la meilleure manière de leur venir en aide dans leur problème du quotidien.</p>
         </aside>
+        </header>
 </body>
 </html>
