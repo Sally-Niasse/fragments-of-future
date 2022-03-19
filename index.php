@@ -75,7 +75,6 @@
         </div>
       </nav>
       <div id="gamespace" class="gamespace">
-        <div class="burger"></div>
         <div class="start recit" id="" data-suiv="<?php echo $_SESSION["save"] ?>">
             <p>Pour suivre l'histoire, cliquez sur l'écran et une bulle de dialogue apparaîtra. Lorsque que plusieurs bulles appraissent les unes à côté des autres, ce sont des choix.  Sélectionnez-en une pour prendre l'embranchement de votre choix.<br> Amusez vous bien !</p>
         </div>
@@ -150,38 +149,65 @@
               $(".gamespace").append(contenu, choix);
 
               //Apparation des bulles personnages 
-              // if (id == 7){
-              //   document.getElementById("sasha").style.display="block";
-              // }
+              if (id == 7){
+                document.getElementById("sasha").style.display="block";
+              }
+              if (id == 9){
+                document.getElementById("twan").style.display="block";
+              }
 
               //changement des BG en fonction des ids
             
-              // if (id <5){
-              //   document.querySelector(".gamespace").style.backgroundImage="url('img/bg/chambre.jpg')";
-              //   console.log("chambre de Liam");
-              //   console.log(id)
-              // }
-              // if (id > 6 && id <= 24 ){
-              //   document.querySelector(".gamespace").style.backgroundImage="url('img/bg/classe.jpg')";
-              //   // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-              //   console.log("salle de classe")
-              //   console.log(id)
+              if (id <=5  || id > 278 && id <= 297 ){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/chambre.jpg')";
+                console.log("chambre de Liam");
+                console.log(id)
+              }
+              if (id > 5 && id <= 24 || id > 81 && id <= 116 || id > 246 && id <= 252  || id > 335 && id <= 346 ){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/classe.jpg')";
+                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+                console.log("salle de classe")
+                console.log(id)
+              }
+
+              if (id > 24 && id <= 43 || id > 346 && id <= 389 ){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/lycee.jpg')";
+                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+              }
+
+              if (id > 43 && id <= 81|| id > 116 && id <= 137){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/toilette.jpg')";
+                document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+              }
+
+              if (id > 137 && id <= 246 ){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/appart.jpg')";
+                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+                console.log("appartement de noona")
+                console.log(id)
+              }
+
+              if (id > 253 && id <= 246 ){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/gymnase-nuit.jpg')";
+                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+                console.log("gymnase de nuit")
+                console.log(id)
+              }
+              if (id > 297 && id <= 335 ){
+                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/rue.jpg')";
+                console.log("chambre de Liam");
+                console.log(id)
+              }
 
 
-              // }
-              // if (id == 3){
-              //   document.querySelector(".gamespace").style.backgroundImage="url('img/bg/toilette.jpg')";
-              //   document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-              // }
               //Apparition des visions
+                if(id == 284){
+                document.querySelector(".vision").style.display="block";
+                document.querySelector(".vision").style.transition="ease-in 1000ms"
+                document.querySelector(".danseur").style.display="block";
+                }
 
-              //   if(id == 7){
-              //   document.querySelector(".vision").style.display="block";
-              //   document.querySelector(".vision").style.transition="ease-in 1000ms"
-              //   document.querySelector(".nanji").style.display="block";
-
-              // }
-              // if(id == 16){
+                // if(id == 16){
               //   console.log("hey");
               //   document.querySelector(".vision").style.display="block";
               //   document.querySelector(".delegue").style.display="block";
