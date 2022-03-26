@@ -37,13 +37,10 @@
   $reqchoix = $bdd -> prepare($reqchoix);
   $reqchoix -> execute();
     if($reqchoix->rowcount()>1){ 
-      echo"<div class ='bubbleChoice'>";
       foreach($reqchoix as $choix){
         
-        $choix_complet .= "<div class='content'><p><a class='choice' href='#'id=".$choix["id_recit"] ." data-suiv='".$choix["suiv"]."'>" . $choix["texte"] . "</a></p>";
-      }
-      echo("</div>");
-    
+        $choix_complet .= "<div class ='bubbleChoice'><div class='content'><p><a class='choice' href='#'id=".$choix["id_recit"] ." data-suiv='".$choix["suiv"]."'>" . $choix["texte"] . "</a></p></div>";
+      }    
     }
   // var_dump ($texte_complet);
   // var_dump($id_suivant);
