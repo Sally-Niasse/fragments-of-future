@@ -25,7 +25,7 @@
     $perso= $data[0]['perso'];
     $id_suivant = $_GET['id_suivant'];
     
-    if($pos == "didascalie" && $pos == "chapter"){
+    if($pos == "didascalie" || $pos == "chapter"){
       $texte_complet="<div class=".$pos." id=".$id." data-suiv=".$data[0]['suiv']."><p>".$text."</p></div>";
     }else{
       $texte_complet= "<div class ='". $pos . "' id='".$id."' data-suiv='".$data[0]['suiv']."'><div class='content'><p>". $text . "</p><img class='". $pdp ."' src='img/perso/". $perso .".png' alt=''></div></div>";

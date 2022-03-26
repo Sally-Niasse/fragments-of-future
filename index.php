@@ -24,47 +24,48 @@
 
 
     <div class="container">
-    <button id="close-menu" class="close-button">&equiv;</button>   
+    <button id="open-menu" class="close-button">&equiv;</button>
+    <button id="close-menu" class="close-button">&times;</button>   
       <nav>     
         
         <img id="logonav" src="img/logo/fof_logo_final_long_black.png" alt="">
         <div class="charactersCard">
         <h3>Personnages rencontrés</h3>
         <div class="circle">
-          <div class="fiche">
-            <img id="sasha" class="pnj" src="img/perso/sasha.png" alt="">
-            <p>Sasha <br> Camarade</p>
+          <div  id="sasha" class="fiche">
+            <img class="pnj" src="img/perso/sasha.png" alt="">
+            <p>Sasha <br> Meilleur ami</p>
           </div>
-          <div class="fiche">
-            <img id="twan" class="pnj" src="img/perso/twan.png" alt="">
-            <p>Twan <br> Camarade</p>
+          <div id="twan"class="fiche">
+            <img class="pnj" src="img/perso/twan.png" alt="">
+            <p>Twan <br> Meilleur ami</p>
           </div>
-          <div class="fiche">
-            <img id="professeur" class="pnj" src="img/perso/professeur.png" alt="">
-            <p>No name <br> Professeur</p>
+          <div  id="professeur" class="fiche">
+            <img class="pnj" src="img/perso/professeur.png" alt="">
+            <p>Mr.King <br> Professeur</p>
           </div>
-          <div class="fiche">
-            <img id="bloup" class="pnj" src="img/perso/bloup.png" alt="">
+          <div id="bloup" class="fiche">
+            <img class="pnj" src="img/perso/bloup.png" alt="">
             <p>Bloup <br> Chat liquide</p>
           </div>
-          <div class="fiche">
-            <img id="noona" class="pnj" src="img/perso/noona.png" alt="">
+          <div id="noona" class="fiche">
+            <img class="pnj" src="img/perso/noona.png" alt="">
             <p>Noona <br> Mamie du futur</p>
           </div>
-          <div class="fiche">
-            <img id="eunji" class="pnj" src="img/perso/eunji.png" alt="">
+          <div id="eunji" class="fiche">
+            <img class="pnj" src="img/perso/eunji.png" alt="">
             <p>Eunji <br> Camarade</p>
           </div>
-          <div class="fiche">
-            <img id="nathan" class="pnj" src="img/perso/nathan.png" alt="">
+          <div id="nathan" class="fiche">
+            <img class="pnj" src="img/perso/nathan.png" alt="">
             <p>Nathan <br> Camarade</p>
           </div>
-          <div class="fiche">
-            <img id="clay" class="pnj" src="img/perso/clay.png" alt="">
+          <div id="clay" class="fiche">
+            <img class="pnj" src="img/perso/clay.png" alt="">
             <p>Clay <br> Ami du futur</p>
           </div>
-          <div class="fiche">
-            <img id="alice" class="pnj" src="img/perso/alice.png" alt="">
+          <div  id="alice" class="fiche">
+            <img class="pnj" src="img/perso/alice.png" alt="">
             <p>Alice <br> Camarade</p>
           </div>
         </div>
@@ -136,7 +137,6 @@
           $.get("affichage.php", {
               "id_suivant": id_suivant
             }, "json")
-            //Ce code sera exécuté en cas de succès - La réponse du serveur est passée à done()
             .done(function(message) {
               // ajoute bloc (message){} soit 2.
               let data = JSON.parse(message);
@@ -149,11 +149,17 @@
               $(".gamespace").append(contenu, choix);
 
               //Apparation des bulles personnages 
-              if (id == 7){
-                document.getElementById("sasha").style.display="block";
+              if (id > 9){
+                document.getElementById("twan").style.display="flex";
               }
-              if (id == 9){
-                document.getElementById("twan").style.display="block";
+              if (id > 16 ){
+                document.getElementById("sasha").style.display="flex";
+              }
+              if (id > 21 ){
+                document.getElementById("professeur").style.display="flex";
+              }
+              if (id > 156 ){
+                document.getElementById("noona").style.display="flex";
               }
 
               //changement des BG en fonction des ids
@@ -177,7 +183,6 @@
 
               if (id > 43 && id <= 81|| id > 116 && id <= 137){
                 document.querySelector(".gamespace").style.backgroundImage="url('img/bg/toilette.jpg')";
-                document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
               }
 
               if (id > 137 && id <= 246 ){
@@ -207,12 +212,15 @@
                 document.querySelector(".danseur").style.display="block";
                 }
 
-                // if(id == 16){
-              //   console.log("hey");
-              //   document.querySelector(".vision").style.display="block";
-              //   document.querySelector(".delegue").style.display="block";
+                if(id == 48){
+                console.log("hey");
+                document.querySelector(".vision").style.display="block";
+                document.querySelector(".delegue").style.display="block";
 
-              // }
+              }
+
+              //Fin de jeu 
+              
 
 
             })

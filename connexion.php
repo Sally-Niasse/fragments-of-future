@@ -31,5 +31,5 @@
                     die();
                 }else{ header('Location: accueil.php?login_err=password'); die(); }
            
-        }else{ header('Location: acuueil.php?login_err=already'); die(); }
+        }else{ header('Location: accueil.php?login_err=already'); die(); }
     }else{ header('Location: accueil.php'); die();} // si le formulaire est envoyé sans aucune données
