@@ -14,7 +14,7 @@
         $insert-> bindParam(':password', $password, PDO::PARAM_STR);
         $insert-> execute(array(":mail"=>$mail, "password"=>$password));
         // On redirige avec le message de succès
-        header('Location:accueil.php');
+        header('Location:index.php');
 
         die();
         }else{

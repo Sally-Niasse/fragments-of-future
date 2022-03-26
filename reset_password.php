@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style_start.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="app.js"></script>
-    <title>Document</title>
+    <title>Réinitiaisation</title>
 </head>
 <body>
 
@@ -23,9 +23,8 @@ session_start();
       $check->execute(array($mail));
       $data = $check->fetch();
       $row = $check->rowCount();
-                // Si le mot de passe est le bon
+                // Si le mail existe
                 if($row > 1){
-                    // On créer la session et on redirige sur index.php
                     $to= $mail;
                     $subject= "Réinitialisation mot de passe";
                     $header= "From: fragmentsoffuture@gmail.com". "\r\n". "Reply-to: fragmentsoffuture@gmail.com". "\r\n". "X-Mailer: PHP" .phpversion();

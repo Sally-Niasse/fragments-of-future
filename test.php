@@ -1,10 +1,40 @@
 <?php
-     $to= 'flavanciaux@gmail.com';
-     $subject = 'le sujet';
-     $message = 'Bonjour !';
-     $headers = 'From: fragmentoffuture@gmail.com' . "\r\n" .
-     'Reply-To: fragmentoffuture@gmail.com' . "\r\n" .
-     'X-Mailer: PHP/' . phpversion();
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-     mail($to, $subject, $message, $headers);
- ?>
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'ssl0.ovh.net';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'fragments_of_future@ovh.net';                     //SMTP username
+    $mail->Password   = 'hiug_R8igbdp87yh';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    $body="<h1>Test</h1>";
+    //Recipients
+    $mail->setFrom('fragmentsoffuture@gmail.com', 'FoF');
+    $mail->addAddress('sniasse@hotmail.com');     //Add a recipient
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Test';
+    $mail->Body    = $body;
+    $mail->AltBody = strip_tags($body);
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}

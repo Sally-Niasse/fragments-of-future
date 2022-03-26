@@ -1,248 +1,84 @@
-<!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style_index.css">
+        <link rel="icon" type="image/png" href="img/logo/fof_logo_final.png"/>
+        <title>Connexion</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+<body>        
+<?php 
+include("config.php");
+   if(isset($_GET['login_err'])) //Vérifie si le get existe
+   {
+       $err = htmlspecialchars($_GET['login_err']);
+// Evite d'utiliser trop de if else
+       switch($err) 
+       {
+           case 'password':
+           ?>
+               <div class="alert alert-danger">
+                   <strong>Erreur</strong> mot de passe incorrect
+               </div>
+           <?php
+           break;
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="img/logo/fof_logo_final.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="vendors/jquery/jquery-3.4.1.min.js"></script>
-  <script src="app.js"></script>
-  <title>Fragments of Future</title>
-</head>
+           case 'login':
+           ?>
+               <div class="alert alert-danger">
+                   <strong>Erreur</strong> login incorrect
+               </div>
+           <?php
+           break;
 
-<body>
-  <?php
-  include("config.php");
-  session_start();
-  if (isset($_SESSION["login"])) { ?>
-
-
+           case 'already':
+           ?>
+               <div class="alert alert-danger">
+                   <strong>Erreur</strong> compte non existant
+               </div>
+           <?php
+           break;
+       }
+   }
+?> 
+<div class="background">
     <div class="container">
-    <button id="open-menu" class="close-button">&equiv;</button>
-    <button id="close-menu" class="close-button">&times;</button>   
-      <nav>     
-        
-        <img id="logonav" src="img/logo/fof_logo_final_long_black.png" alt="">
-        <div class="charactersCard">
-        <h3>Personnages rencontrés</h3>
-        <div class="circle">
-          <div  id="sasha" class="fiche">
-            <img class="pnj" src="img/perso/sasha.png" alt="">
-            <p>Sasha <br> Meilleur ami</p>
-          </div>
-          <div id="twan"class="fiche">
-            <img class="pnj" src="img/perso/twan.png" alt="">
-            <p>Twan <br> Meilleur ami</p>
-          </div>
-          <div  id="professeur" class="fiche">
-            <img class="pnj" src="img/perso/professeur.png" alt="">
-            <p>Mr.King <br> Professeur</p>
-          </div>
-          <div id="bloup" class="fiche">
-            <img class="pnj" src="img/perso/bloup.png" alt="">
-            <p>Bloup <br> Chat liquide</p>
-          </div>
-          <div id="noona" class="fiche">
-            <img class="pnj" src="img/perso/noona.png" alt="">
-            <p>Noona <br> Mamie du futur</p>
-          </div>
-          <div id="eunji" class="fiche">
-            <img class="pnj" src="img/perso/eunji.png" alt="">
-            <p>Eunji <br> Camarade</p>
-          </div>
-          <div id="nathan" class="fiche">
-            <img class="pnj" src="img/perso/nathan.png" alt="">
-            <p>Nathan <br> Camarade</p>
-          </div>
-          <div id="clay" class="fiche">
-            <img class="pnj" src="img/perso/clay.png" alt="">
-            <p>Clay <br> Ami du futur</p>
-          </div>
-          <div  id="alice" class="fiche">
-            <img class="pnj" src="img/perso/alice.png" alt="">
-            <p>Alice <br> Camarade</p>
-          </div>
+    <a href="index.php"><button class="retour">&larr;</button></a> 
+        <form action="connexion.php" method="POST">
+            <img src="img/logo/fof_logo_final_long_black.png" alt="">
+        <div class="form-group">
+            <input type="mail" name="mail" placeholder="Mail" required>
         </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
+            <p><a href="reset_password.php">Mot de passe oublié ?</a></p>
         </div>
-        <div class="setting">
-          <a href="deconnexion.php"><img src="img/logo/log-out.png" alt=""></a>
-          <a href="https://www.instagram.com/fragmentsoffuture/?hl=fr" target="_blank"><img src="img/logo/instagram.png" alt=""></a>
+        <p>En vous connectant, vous acceptez de vous conformez à la <a href="#"> Politique de confidentialité</a> et aux  <a href="#"> Conditions générales</a> de Fragments of Future
+        </p>
+        <div class="form-group">
+            <input type="submit" value="Connexion">
+        </div>  
+        <p>Vous n’êtes pas encore membre ? <a href="inscription.php">Rejoignez-nous</a></p> 
+        </form>
+    </div>
+</div>
+        <header>
+        <div class="fof">
+                <img src="img/logo/fof_logo_final_long_black.png" alt="">
+                <a href="#" id="start">Commencer l'aventure</a>
         </div>
-      </nav>
-      <div id="gamespace" class="gamespace">
-        <div class="start recit" id="" data-suiv="<?php echo $_SESSION["save"] ?>">
-            <p>Pour suivre l'histoire, cliquez sur l'écran et une bulle de dialogue apparaîtra. Lorsque que plusieurs bulles appraissent les unes à côté des autres, ce sont des choix.  Sélectionnez-en une pour prendre l'embranchement de votre choix.<br> Amusez vous bien !</p>
-        </div>
-      </div>
-
-      <div class="vision">
-        <div class="delegue">
-          <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/delegue.jpg" alt="">
-        </div>
-        <div class="danseur">
-          <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/danseur.jpg" alt="">
-        </div>
-        <div class="nanji">
-          <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/nanji.jpg" alt="">
-        </div>
-      </div>
-      </div>
-
-      <script>
-        var gamespace = document.getElementById("gamespace");
-        var compteur = 0;
-
-        function scrollDown() {
-          gamespace.scrollTop = gamespace.scrollHeight;
-          // gamespace.scrollTop.style.transition="ease-in-out 200ms";
-
-        }
-        // Compteur qui efface les premières bulles
-        $(".gamespace").on("click", function() {
-          compteur = compteur + 1;
-
-          if (compteur >= 10) {
-            $(".gamespace div").first().remove();
-          }
-        });
-
-        //Script condition d'apparition des bulles
-        var id_suivant = 1;
-
-        $(".gamespace").on("click", function(e) {
-          //récupération de l'id_suivant penser a jouter un bloc en display none avec l'attr data-suiv pour le e.target fonctionne la première fois
-          if (e.target.classList.contains("choice")) {
-            var idSuivant = e.target.dataset.suiv;
-            id_suivant = idSuivant;
-            console.log(id_suivant);
-            scrollDown();
-
-          } else {
-            var lastBubble = document.querySelector(".gamespace").lastElementChild;
-            id_suivant = lastBubble.dataset.suiv;
-            console.log(id_suivant);
-            scrollDown();
-          }
-
-
-          $.get("affichage.php", {
-              "id_suivant": id_suivant
-            }, "json")
-            .done(function(message) {
-              // ajoute bloc (message){} soit 2.
-              let data = JSON.parse(message);
-              var contenu = data[0];
-              var choix = data[1];
-              var id = data[2];
-              console.log(message);
-              // alert(nbrid);
-              id_suivant = id;
-              $(".gamespace").append(contenu, choix);
-
-              //Apparation des bulles personnages 
-              if (id > 9){
-                document.getElementById("twan").style.display="flex";
-              }
-              if (id > 16 ){
-                document.getElementById("sasha").style.display="flex";
-              }
-              if (id > 21 ){
-                document.getElementById("professeur").style.display="flex";
-              }
-              if (id > 156 ){
-                document.getElementById("noona").style.display="flex";
-              }
-
-              //changement des BG en fonction des ids
-            
-              if (id <=5  || id > 278 && id <= 297 ){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/chambre.jpg')";
-                console.log("chambre de Liam");
-                console.log(id)
-              }
-              if (id > 5 && id <= 24 || id > 81 && id <= 116 || id > 246 && id <= 252  || id > 335 && id <= 346 ){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/classe.jpg')";
-                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-                console.log("salle de classe")
-                console.log(id)
-              }
-
-              if (id > 24 && id <= 43 || id > 346 && id <= 389 ){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/lycee.jpg')";
-                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-              }
-
-              if (id > 43 && id <= 81|| id > 116 && id <= 137){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/toilette.jpg')";
-              }
-
-              if (id > 137 && id <= 246 ){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/appart.jpg')";
-                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-                console.log("appartement de noona")
-                console.log(id)
-              }
-
-              if (id > 253 && id <= 246 ){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/gymnase-nuit.jpg')";
-                // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-                console.log("gymnase de nuit")
-                console.log(id)
-              }
-              if (id > 297 && id <= 335 ){
-                document.querySelector(".gamespace").style.backgroundImage="url('img/bg/rue.jpg')";
-                console.log("chambre de Liam");
-                console.log(id)
-              }
-
-
-              //Apparition des visions
-                if(id == 284){
-                document.querySelector(".vision").style.display="block";
-                document.querySelector(".vision").style.transition="ease-in 1000ms"
-                document.querySelector(".danseur").style.display="block";
-                }
-
-                if(id == 48){
-                console.log("hey");
-                document.querySelector(".vision").style.display="block";
-                document.querySelector(".delegue").style.display="block";
-
-              }
-
-              //Fin de jeu 
-              
-
-
-            })
-
-            .fail(function(error) {
-              alert("La requête s'est terminée en échec. Infos : " + JSON.stringify(error));
-            })
-            //Ce code sera exécuté que la requête soit un succès ou un échec
-            .always(function() {
-              // alert("Requête effectuée");
-            });
-          // $.get("save.php", {"save": id_suivant});
-          // console.log("hey");
-
-
-        });
-      </script>
-
-    <?php
-  }
-    ?>
-
-
-
+        <aside>
+       <p> Se réveiller en retard, devoir courir pour se préparer et arriver en retard à l’école, c’est une situation qui est arrivée à tout le monde. Mais, dans la même journée, utiliser sa capacité d’observer des bribes du futur pour se faire élire délégué de sa classe, c’est beaucoup moins commun. C’est pourtant la journée de Liam, qui doit apprendre à manier son nouveau don de prémonition pour aider ses camarades de classe.</p>
+       <p>Vous devrez guider Liam dans ses choix. A travers les visions et les interactions que vous avez avec les personnages, déduisez la meilleure manière de leur venir en aide dans leur problème du quotidien.</p>
+        </aside>
+        </header>
 </body>
+</html>

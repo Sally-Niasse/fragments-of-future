@@ -27,9 +27,9 @@
                     $_SESSION['login'] = $data['mail'];
                     // $_SESSION['save']=0;
                     $_SESSION['save']=$data["save"];
-                    header('Location: index.php');
+                    header('Location: fof.php');
                     die();
-                }else{ header('Location: accueil.php?login_err=password'); die(); }
+                }else{ header('Location: index.php?login_err=password'); die(); }
            
-        }else{ header('Location: accueil.php?login_err=already'); die(); }
-    }else{ header('Location: accueil.php'); die();} // si le formulaire est envoyé sans aucune données
+        }else{ header('Location: index.php?login_err=already'); die(); }
+    }else{ header('Location: index.php'); die();} // si le formulaire est envoyé sans aucune données
