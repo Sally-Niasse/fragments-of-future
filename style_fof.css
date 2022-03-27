@@ -1,90 +1,95 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     opacity: 0;
 }
 
 :root {
-    --violet:#988AA8;
-    --grisViolet:#716F6F;
-    --crème:#F6E3CF;
+    --violet: #988AA8;
+    --grisViolet: #716F6F;
+    --crème: #F6E3CF;
 }
 
-body, html{
+body,
+html {
     overflow: hidden;
-    max-height: 100vh; 
+    max-height: 100vh;
     scroll-behavior: smooth;
 
 }
- 
-body{
+
+body {
     margin: 0;
     margin-top: 0;
     font-family: 'Ropa Sans', sans-serif;
 
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: row;
     height: 100vh;
 }
 
 /* Navigation menu */
-#close-menu, #open-menu{
-    display: none ;
-    transition: linear
-     400ms;
+#close-menu,
+#open-menu {
+    display: none;
+    transition: linear 400ms;
     z-index: 5;
-   
+
 }
-nav{
+
+nav {
     width: 33.333%;
-    background-color:var(--violet);
+    background-color: var(--violet);
     height: 100vh;
 }
-#logonav{
+
+#logonav {
     width: 50%;
     margin-left: 25%;
 
 }
 
-h2{
+h2 {
     font-size: 1.8rem;
     text-align: center;
 }
-h3{
+
+h3 {
     margin-top: 5%;
-text-align: center;
-font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-.background{
+.background {
     background-color: royalblue;
     width: 77%;
 }
 
 .charactersCard {
     background-color: var(--crème);
-    margin-left:5%;
-    margin-right:5%;
-    padding-top:3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 3%;
 }
 
 .charactersCard::after {
-    content :"";
+    content: "";
     background-color: var(--violet) !important;
-    background:url('img/bg/scratch_paper.png');
-    background-size:cover;
-    width:100%;
-    height:76px;
+    background: url('img/bg/scratch_paper.png');
+    background-size: cover;
+    width: 100%;
+    height: 76px;
     display: block;
 }
 
 .charactersCard hr {
-    border:.7px solid black;
-    margin-left:10%;
-    margin-right:10%;
+    border: .7px solid black;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.circle{
+.circle {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -92,32 +97,44 @@ font-size: 1.5rem;
     align-items: flex-start;
 
 }
-.pnj{
+
+.pnj {
     border-radius: 50%;
     background-color: var(--grisViolet);
     height: auto;
     width: 50%;
-    margin:auto;
- 
+    margin: auto;
+
 }
-#sasha, #twan, #professeur, #bloup, #noona, #eunji, #nathan, #alice, #clay{
+
+#sasha,
+#twan,
+#professeur,
+#bloup,
+#noona,
+#eunji,
+#nathan,
+#alice,
+#clay {
     display: none;
 }
- /* #sasha, #twan{
-    display: none;
-} */
-.fiche{
+
+/*Fiche personnage*/
+.fiche {
     width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.fiche p{
+
+.fiche p {
     text-align: center;
     font-size: 1rem;
 }
-.setting{
+
+/*Paramètre*/
+.setting {
     position: relative;
     display: flex;
     width: 100%;
@@ -129,10 +146,12 @@ font-size: 1.5rem;
     width: 25px;
     height: 25px;
 }
-#user:hover{
+
+#user:hover {
     cursor: pointer;
 }
-.user{
+
+.user {
     left: 0;
     top: 0;
     position: relative;
@@ -141,7 +160,8 @@ font-size: 1.5rem;
     background-color: var(--violet);
     z-index: 10;
 }
-.info{
+
+.info {
     width: 90%;
     transform: translate(0%, 50%);
     margin: auto;
@@ -149,16 +169,20 @@ font-size: 1.5rem;
     text-align: center;
     height: auto;
 }
+
 .info img {
-    width : 20%
+    width: 20%
 }
-.retour{
-    color: #000 !important; 
+
+.retour {
+    color: #000 !important;
 }
+
 .info p {
     text-align: center;
     padding: 1%;
 }
+
 .info a {
     position: unset;
     font-weight: bold;
@@ -168,10 +192,11 @@ font-size: 1.5rem;
     padding: 2%;
     border: #ff0000;
     border-radius: 5px;
-    font-size: 1rem ;
+    font-size: 1rem;
 }
-/*Espace de jeu*/
-.gamespace{
+
+/*Espace de principal*/
+.gamespace {
     width: 77%;
     background-image: url("img/bg/chambre.jpg");
     background-size: contain;
@@ -180,7 +205,9 @@ font-size: 1.5rem;
     flex-direction: column;
     overflow-x: hidden;
 }
-.start{
+
+/*Bulle d'initialisation*/
+.start {
     margin-left: 12%;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -192,57 +219,66 @@ font-size: 1.5rem;
     background-color: #988AA8;
 
 }
- .bubbleLiam{
-    display:inline-flex;
+
+/*Mise en forme des bulles de dialogue */
+.bubbleLiam {
+    display: inline-flex;
     width: 70%;
     margin-left: 30%;
     margin-bottom: 2%;
 
- }
- .bubbleChoice{
-   width: 100%;
-   justify-content: center;
-   display: flex;
-   margin-right: auto;
-   margin-left: auto;
 }
- .bubbleChoice .content{
+
+.bubbleChoice {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bubbleChoice .content {
     width: 100%;
     margin: auto;
     justify-content: center;
 }
-.bubbleChoice a{
+
+.bubbleChoice a {
     color: black;
     text-decoration: none;
 }
 
-.bubbleChoice p:hover{
-  background-color: #f5cf52;
-  transition: ease-in 500ms;
-  color: white;
+.bubbleChoice p:hover {
+    background-color: #f5cf52;
+    transition: ease-in 500ms;
+    color: white;
 }
-.bubbleChoice p{
+
+.bubbleChoice p {
     width: 50%;
     background-color: var(--crème);
     padding: 4%;
-    text-align: center; 
+    text-align: center;
     transition: ease-out 500ms;
     border-radius: 10px 3px 10px 3px;
 }
-input[submit]{
+
+input[submit] {
     background-color: none;
     border: 0;
     margin: 0;
 
 }
- .bubbleRandom{
-    display:inline-flex;
+
+.bubbleRandom {
+    display: inline-flex;
     width: 70%;
     margin-right: 30%;
     margin-bottom: 2%;
 
- }
- .bubbleRandom p{    /*A concatener avec le bubblLiam p */
+}
+
+.bubbleRandom p {
     width: 70%;
     background-color: var(--crème);
     padding: 2%;
@@ -250,86 +286,106 @@ input[submit]{
     height: fit-content;
     border-radius: 0px 8px 8px 8px;
 }
-.content{
-    max-height:25vh;
+
+.content {
+    max-height: 25vh;
     width: 90vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.random_pdp{
-    margin-left :4vw;
-    order:-1;
+
+.random_pdp {
+    margin-left: 4vw;
+    order: -1;
 }
-.liam_pdp{
-    margin-right :4vw;
+
+.liam_pdp {
+    margin-right: 4vw;
 }
-.liam_pdp, .random_pdp{
+
+.liam_pdp,
+.random_pdp {
     border-radius: 50%;
     background-color: var(--grisViolet);
     width: 7vw;
     height: 14vh;
 }
- .bubbleLiam p{ 
+
+.bubbleLiam p {
     width: 70%;
     background-color: var(--crème);
     padding: 2%;
     text-align: right;
     border-radius: 8px 0px 8px 8px;
- }
- .didascalie, .chapter{
-     text-align: center;
-     font-style: italic;
-     margin: auto;
-     color: var(--crème);
-     width: 50%;
-     height: fit-content;
-     background-color: var(--violet);
+}
 
- }
- .chapter{
+/* Mise en forme des bulles informatives */
+.didascalie,
+.chapter {
+    text-align: center;
+    font-style: italic;
+    margin: auto;
+    color: var(--crème);
+    width: 50%;
+    height: fit-content;
+    background-color: var(--violet);
+
+}
+
+.chapter {
     font-weight: bold;
     font-size: 2rem;
- }
- /* Modal vision*/
- .vision{
-     display: none;
-     position: absolute;
-     z-index: 10;
-     width: 70%;
-     height: 100%;
-     background-color: rgba(0,0,0,0.6);
-     top:0px;
-     right: 0px;
-     transition: ease-in-out 200ms;
-     transform: scale(1);
+}
 
- }
- button{
-     background: none;
-     border: none;
-     color: white;
-     font-size: 2.5rem;
-     cursor: pointer;
-     font-weight: bold;
-     position: absolute ;
-     top: 2%;
-     left: 2%;
- }
- .vision img{
-     width: 70%;
-     text-align: center;
-     transform: translate(20%,5%) scale(1);
- }
- .open-button{
-     position: absolute ;
-     top: 2%;
-     left: 2%;
- }
- .delegue, .danseur, .nanji, .contrat{
-     display: none;
- }
- .endgame {
+/* Modal des vision*/
+.vision {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0px;
+    right: 0px;
+    transition: ease-in-out 200ms;
+    transform: scale(1);
+
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.vision img {
+    width: 70%;
+    text-align: center;
+    transform: translate(20%, 5%) scale(1);
+}
+
+.open-button {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.delegue,
+.danseur,
+.nanji,
+.contrat {
+    display: none;
+}
+
+/* Modal de fin de jeu*/
+.endgame {
     display: none;
     position: absolute;
     top: 0;
@@ -337,144 +393,173 @@ input[submit]{
     width: 100vw;
     height: 100vh;
     z-index: 30;
-    background-color:  rgba(0,0,0,0.6);
- }
- .endgame div{
-    position: relative;
-     text-align: center;
-     top: 50%;
-     transform: translate(50%,-50%);
-     padding: 1%;
-     width:50vw;
-     height: auto;
-     background-color: var(--crème);
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
- }
- .endgame a{
-     color: var(--violet);
-     text-decoration: none;
-     border: var(--violet);
-     
- }
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
- /* Media queries */
- @media screen and (max-width: 1000px) {
-     #logonav{
-         width: 60%
-     }
-    .pnj{
+.endgame div {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(50%, -50%);
+    padding: 1%;
+    width: 50vw;
+    height: auto;
+    background-color: var(--crème);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.endgame a {
+    color: var(--violet);
+    text-decoration: none;
+    border: var(--violet);
+
+}
+
+/* Media queries */
+@media screen and (max-width: 1000px) {
+    #logonav {
+        width: 60%
+    }
+
+    .pnj {
         width: 70%;
     }
-    h3{
+
+    h3 {
         font-size: 1rem;
     }
-    
- }
 
-  @media screen and (max-width: 800px) { /*tablette*/
-    #open-menu{
+}
+
+@media screen and (max-width: 800px) {
+
+    /*tablette*/
+    #open-menu {
         display: block;
         text-align: left;
         transition: linear 400ms;
         font-size: 2rem;
     }
+
     nav {
         position: absolute;
         top: 0;
-        left:-100vw;
+        left: -100vw;
         height: 100vh;
         width: 100%;
-        transition: linear
-         500ms;
+        transition: linear 500ms;
         overflow-y: scroll;
     }
 
-    #logonav{
+    #logonav {
         width: 40%;
         margin-left: 30%;
     }
 
-    h3{
-    font-size: 1.2rem;
+    h3 {
+        font-size: 1.2rem;
     }
-    
+
     .charactersCard::after {
-        height:150px;
+        height: 150px;
     }
-    
-    .circle{
+
+    .circle {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 100%;
         align-items: flex-start;
-    
+
     }
-    .pnj{
+
+    .pnj {
         width: 45%;
     }
-    .fiche{
+
+    .fiche {
         width: 30%;
     }
+
     /*Gamespace*/
-    .gamespace{
+    .gamespace {
         width: 100%;
         background-size: cover;
-    } 
-    .bubbleLiam, .bubbleRandom{
-        width:80%
     }
-    .bubbleLiam{
+
+    .bubbleLiam,
+    .bubbleRandom {
+        width: 80%
+    }
+
+    .bubbleLiam {
         margin-left: 20%;
     }
-    .liam_pdp, .random_pdp{
+
+    .liam_pdp,
+    .random_pdp {
         width: auto;
         height: 15vh;
     }
-    .random_pdp{
-        margin-left :1vw;
+
+    .random_pdp {
+        margin-left: 1vw;
     }
-    .liam_pdp{
-        margin-right :1vw;
+
+    .liam_pdp {
+        margin-right: 1vw;
     }
-    .content{
+
+    .content {
         justify-content: space-around;
     }
-    .bubbleChoice{
+
+    .bubbleChoice {
         width: 90vw;
     }
+
     /*Vision*/
-    .vision{
+    .vision {
         width: 100%;
     }
-    .vision img{
+
+    .vision img {
         width: 90%;
-        transform: translate(6%,30%) scale(1);
+        transform: translate(6%, 30%) scale(1);
 
-  }
+    }
 
-  @media screen and (max-width: 480px) { /*mobile*/
-    .gamespace{
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .bubbleLiam, .bubbleRandom{
-        width:80%
-    }
-    .bubbleLiam{
-        margin-left: 20%;
-    }
-    .liam_pdp, .random_pdp{
-        height: 12vh;
-    }
-    .bubbleChoice{
-        flex-direction: column;
-    }
-    .vision img{
-        width: 100%;
-        transform: translate(0%,60%) scale(1);
+    @media screen and (max-width: 480px) {
 
-  }
+        /*mobile*/
+        .gamespace {
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-  }
+        .bubbleLiam,
+        .bubbleRandom {
+            width: 80%
+        }
+
+        .bubbleLiam {
+            margin-left: 20%;
+        }
+
+        .liam_pdp,
+        .random_pdp {
+            height: 12vh;
+        }
+
+        .bubbleChoice {
+            flex-direction: column;
+        }
+
+        .vision img {
+            width: 100%;
+            transform: translate(0%, 60%) scale(1);
+
+        }
+
+    }
 }

@@ -8,8 +8,7 @@
     <title>Fragments of Future : Accueil</title>
 
     <!-- Imports -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Fonts -->
@@ -28,7 +27,7 @@
 </head>
 
 <body>
-<?php
+    <?php
     include("config.php");
     if (isset($_GET['login_err'])) //Vérifie si le get existe
     {
@@ -86,7 +85,7 @@
             <form action="connexion.php" method="POST">
                 <img src="img/logo/fof_logo_final_long_black.png" alt="">
                 <div class="form-group">
-                    <input type="mail" name="mail" placeholder="Mail" required>
+                    <input type="email" name="mail" placeholder="Mail" required>
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
@@ -120,29 +119,25 @@
 
         <div class="fof-gallery">
             <div class="fof-card">
-                <img class="fof-bubble"
-                    src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
                 <h3>Un visual Novel</h3>
                 <p>Vous y serez capable de décider du destin des personnages</p>
             </div>
 
             <div class="fof-card">
-                <img class="fof-bubble"
-                    src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
                 <h3>Une histoire</h3>
                 <p> Celle de Liam, un lycéen pas si ordinaire, et de son don de voyance</p>
             </div>
 
             <div class="fof-card">
-                <img class="fof-bubble"
-                    src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
                 <h3>Des personnages</h3>
                 <p>Liam, sa classe, et peut-être même un chat liquide, qui sait ?</p>
             </div>
 
             <div class="fof-card">
-                <img class="fof-bubble"
-                    src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
                 <h3>Un projet</h3>
                 <p>Le défi de 5 étudiants, réalisé en 6 mois seulement</p>
             </div>

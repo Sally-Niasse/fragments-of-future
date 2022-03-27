@@ -2,7 +2,6 @@
 session_start();
 include("config.php");
 
-// Si les variables existent et qu'elles ne sont pas vides
 if (!empty($_POST['mail']) && !empty($_POST['password']) && !empty($_POST['password_retype'])) {
 
     $mail = htmlspecialchars($_POST['mail']);
@@ -13,7 +12,7 @@ if (!empty($_POST['mail']) && !empty($_POST['password']) && !empty($_POST['passw
     $row = $check->rowCount();
 
     if($row = 0){
-        if ($_POST['password'] === $_POST['password_retype']) { // si les deux mdp saisis sont bons
+        if ($_POST['password'] === $_POST['password_retype']) {
             $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     
             $requete = "INSERT INTO utilisateurs VALUES(NULL, :mail, :password, 1)";
@@ -21,6 +20,7 @@ if (!empty($_POST['mail']) && !empty($_POST['password']) && !empty($_POST['passw
             $insert->bindParam(':mail', $mail, PDO::PARAM_STR);
             $insert->bindParam(':password', $password, PDO::PARAM_STR);
             $insert->execute(array(":mail" => $mail, "password" => $password));
+
             // On redirige avec le message de succès
             echo ("inscription");
             header('Location:index.php?success=new_account');

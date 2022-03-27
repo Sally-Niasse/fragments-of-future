@@ -11,5 +11,3 @@ if(isset($_GET["save"])){
     echo $_SESSION["save"];
 
 }
-
-?>
