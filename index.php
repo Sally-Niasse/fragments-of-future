@@ -101,10 +101,10 @@
     </div>
 
     <img id="frag1" class="fragments" src="img/perso/eunji.png">
-    <img id="frag2" class="fragments" src="img/vision/danseur_vision.jpeg">
+    <img id="frag2" class="fragments" src="img/vision/danseur.jpg">
     <img id="frag3" class="fragments" src="img/perso/alice.png">
     <img id="frag4" class="fragments" src="img/perso/bloup.png">
-    <img id="background-img" src="/img/logo/cracks.png">
+    <img id="background-img" src="./img/logo/cracks.png">
 
     <section class="home">
         <div class="home-containt">
