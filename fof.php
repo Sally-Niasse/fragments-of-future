@@ -24,6 +24,13 @@
 
 
     <div class="container">
+      <div class="endgame">
+        <div>
+          <h2> Vous avez atteint le dernier chapitre, merci de patienter jusque la prochaine mise à jour !</h2>
+          <p>Vous serez avertis sur notre compte instagram de l'arrivé des chapitres suivants</p>
+          <p><a href="deconnexion.php">Retour à l'accueil</a></p>
+        </div>
+      </div>
       <button id="open-menu" class="close-button">&equiv;</button>
       <button id="close-menu" class="close-button">&times;</button>
       <nav>
@@ -105,6 +112,10 @@
         <div class="nanji">
           <button id="close-btn" class="close-button">&times;</button>
           <img src="img/vision/nanji.jpg" alt="">
+        </div>
+        <div class="contrat">
+          <button id="close-btn" class="close-button">&times;</button>
+          <img src="img/vision/eunji-contrat.jpg" alt="">
         </div>
       </div>
     </div>
@@ -226,13 +237,23 @@
             }
 
             if (id == 48) {
-              console.log("hey");
               document.querySelector(".vision").style.display = "block";
               document.querySelector(".delegue").style.display = "block";
 
             }
+            
+            if (id == 342) {
+              document.querySelector(".vision").style.display = "block";
+              document.querySelector(".contrat").style.display = "block";
+
+            }
 
             //Fin de jeu 
+            if (id == 389) {
+              document.querySelector(".endgame").style.display = "block";
+              document.querySelector(".gamespace"). style.pointerEvents="none";
+
+            }
 
 
 
