@@ -53,7 +53,8 @@
     $req-> execute();
 
 }
-// $return_arr[] = array("texte" => $texte_complet,"choix"=> $choix_complet,"id_suivant"=> $id_suivant);
+
+
 $_SESSION["save"]=$id_suivant;
 $return_arr = array($texte_complet, $choix_complet, $_SESSION["save"]);
 

@@ -90,7 +90,6 @@
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
-                    <p><a href="reset_password.php">Mot de passe oublié ?</a></p>
                 </div>
                 <p>En vous connectant, vous acceptez de vous conformez à la <a href="#"> Politique de confidentialité</a> et aux <a href="#"> Conditions générales</a> de Fragments of Future
                 </p>
