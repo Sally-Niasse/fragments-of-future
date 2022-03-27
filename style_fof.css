@@ -29,7 +29,7 @@ body{
 
 /* Navigation menu */
 #close-menu, #open-menu{
-    display: none;
+    display: none ;
     transition: linear
      400ms;
     z-index: 5;
@@ -122,13 +122,54 @@ font-size: 1.5rem;
     position: relative;
     display: flex;
     width: 100%;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
 }
 
 .setting img {
     width: 25px;
     height: 25px;
+}
+#user:hover{
+    cursor: pointer;
+}
+.user{
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.info{
+    width: 90%;
+    transform: translate(0%, 50%);
+    margin: auto;
+    /* background-color: #716F6F; */
+    text-align: center;
+    height: auto;
+}
+.info img {
+    width : 20%
+}
+.retour{
+    color: #000 !important; 
+}
+.info p {
+    text-align: center;
+    padding: 1%;
+}
+.info a {
+    position: unset;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 2%;
+    border: #ff0000;
+    border-radius: 5px;
+    font-size: 1rem ;
 }
 /*Espace de jeu*/
 .gamespace{
@@ -160,7 +201,7 @@ font-size: 1.5rem;
 
  }
  .bubbleChoice{
-   width: 40vw;
+   width: 100%;
    justify-content: center;
    display: flex;
    margin-right: auto;
@@ -169,6 +210,7 @@ font-size: 1.5rem;
  .bubbleChoice .content{
     width: 100%;
     margin: auto;
+    justify-content: center;
 }
 .bubbleChoice a{
     color: black;

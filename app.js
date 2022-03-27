@@ -11,16 +11,15 @@ $(document).ready(function(){
     $("#reinitialiser").click(function(){
         $(".reset").fadeIn(500);
     });
+    
+    $(".user").hide();
+    $("#user").click(function(){
+        $(".user").fadeIn(500);
+    });
+    $(".user .retour").click(function(){
+        $(".user").hide();
+    });
 
-    
-   /* $("#close-menu").on("click", function(){
-        if ($("nav").css("left","-100%")) {
-            $("#close-menu").html("&times;");
-            $("nav").css("left","0%");
-        }
-        else {}
-    }); */
-    
     $("#open-menu").on("click", function(){
         $("nav").animate({left: '0%'}, "slow");
         $("#open-menu").css("display","none");
@@ -31,20 +30,5 @@ $(document).ready(function(){
             $("#open-menu").css("display","block");
             $("#close-menu").css("display","none");
             });
-  
-
-    // $("#close-menu").on("click", function(){
-    //     symbol = $("#close-menu").html();
-    //     console.log(symbol);
-    //     if (symbol == "&equiv;") {
-    //         $("nav").css("left","0vw");
-    //         $("#close-menu").html("&times;");
-    //     }
-    //     else {
-    //         console.log("bingo");
-    //         $("nav").css("left","-100vw");
-    //         $("#close-menu").html("&equiv;");
-
-    //     }
   
     });

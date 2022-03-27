@@ -17,8 +17,7 @@
         
 
         // Si > à 0 alors l'utilisateur existe
-        if($row > 0)
-        {
+        if($row > 0){
                 // Si le mot de passe est le bon
                 if(password_verify($password, $data['password']))
                 {
@@ -33,3 +32,5 @@
            
         }else{ header('Location: index.php?login_err=already'); die(); }
     }else{ header('Location: index.php'); die();} // si le formulaire est envoyé sans aucune données
+
+    ?>

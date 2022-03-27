@@ -6,6 +6,8 @@
    $texte_complet="";
    $didascalie="";
    $choix_complet="";
+   $choix_contenu="";
+
    $id_suivant=0;
 
   if (isset($_GET['id_suivant'])){
@@ -38,9 +40,9 @@
   $reqchoix -> execute();
     if($reqchoix->rowcount()>1){ 
       foreach($reqchoix as $choix){
-        
-        $choix_complet .= "<div class ='bubbleChoice'><div class='content'><p><a class='choice' href='#'id=".$choix["id_recit"] ." data-suiv='".$choix["suiv"]."'>" . $choix["texte"] . "</a></p></div>";
+        $choix_contenu.= "<div class='content'><p><a class='choice' href='#'id=".$choix["id_recit"] ." data-suiv='".$choix["suiv"]."'>" . $choix["texte"] . "</a></p></div>";
       }    
+      $choix_complet="<div class ='bubbleChoice'>".$choix_contenu."</div>";
     }
   // var_dump ($texte_complet);
   // var_dump($id_suivant);
@@ -52,7 +54,6 @@
 
 }
 // $return_arr[] = array("texte" => $texte_complet,"choix"=> $choix_complet,"id_suivant"=> $id_suivant);
-
 $_SESSION["save"]=$id_suivant;
 $return_arr = array($texte_complet, $choix_complet, $_SESSION["save"]);
 
