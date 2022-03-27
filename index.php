@@ -85,7 +85,7 @@
             <form action="connexion.php" method="POST">
                 <img src="img/logo/fof_logo_final_long_black.png" alt="">
                 <div class="form-group">
-                    <input type="email" name="mail" placeholder="Mail" required>
+                    <input type="mail" name="mail" placeholder="Mail" required>
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
