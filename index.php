@@ -90,7 +90,7 @@
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
                 </div>
-                <p>En vous connectant, vous acceptez de vous conformez à la <a href="#"> Politique de confidentialité</a> et aux <a href="#"> Conditions générales</a> de Fragments of Future
+                <p>En vous connectant, vous acceptez de vous conformez à la <a href="mentionlegale.html" target="_blank"> Politique de confidentialité</a> et aux <a href="mentionlegale.html" target="_blank"> Conditions générales</a> de Fragments of Future
                 </p>
                 <div class="form-group">
                     <input type="submit" value="Connexion">
