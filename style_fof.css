@@ -5,7 +5,10 @@
 :root {
     --violet: #988AA8;
     --grisViolet: #716F6F;
-    --crème: #F6E3CF;
+    --creme: #F6E3CF;
+    --lightCreme: #f7eee5;
+    --accent:#8C46E8;
+    --bubbleShadow:drop-shadow(1px 1px 3px rgb(48, 48, 48));
 }
 
 body,
@@ -42,12 +45,13 @@ nav {
     width: 33.333%;
     background-color: var(--violet);
     height: 100vh;
+    /* border-right:2px solid var(--creme); */
+    filter:drop-shadow(0px 1px 3px rgb(56, 56, 56));
 }
 
 #logonav {
     width: 50%;
     margin-left: 25%;
-
 }
 
 h2 {
@@ -61,13 +65,8 @@ h3 {
     font-size: 1.5rem;
 }
 
-.background {
-    background-color: royalblue;
-    width: 77%;
-}
-
 .charactersCard {
-    background-color: var(--crème);
+    background-color: var(--creme);
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 3%;
@@ -209,15 +208,17 @@ h3 {
 /*Bulle d'initialisation*/
 .start {
     margin-left: 12%;
-    margin-top: 1%;
+    margin-top: 3%;
     margin-bottom: 1%;
-    color: var(--crème);
+    line-height:1.6;
+    color:black;
     padding: 1%;
-    text-align: start;
+    text-align: center;
     width: 70%;
     height: fit-content;
-    background-color: #988AA8;
-
+    background-color: var(--lightCreme);
+    border-top:3px solid black;
+    border-bottom:3px solid black;
 }
 
 /*Mise en forme des bulles de dialogue */
@@ -226,7 +227,6 @@ h3 {
     width: 70%;
     margin-left: 30%;
     margin-bottom: 2%;
-
 }
 
 .bubbleChoice {
@@ -248,26 +248,29 @@ h3 {
     text-decoration: none;
 }
 
-.bubbleChoice p:hover {
-    background-color: #f5cf52;
-    transition: ease-in 500ms;
-    color: white;
-}
-
 .bubbleChoice p {
     width: 50%;
-    background-color: var(--crème);
+    background-color: var(--creme);
     padding: 4%;
     text-align: center;
-    transition: ease-out 500ms;
-    border-radius: 10px 3px 10px 3px;
+    transition: .5s;
+    border-radius: 20px 5px 20px 5px;
+    border:7px double var(--creme);
+    cursor:pointer;
+    filter:var(--bubbleShadow);
+}
+
+.bubbleChoice p:hover {
+    filter:drop-shadow(0px 0px 0px);
+    border:7px double black;
+    border-radius:0px;
+    letter-spacing:1.5px;
 }
 
 input[submit] {
     background-color: none;
     border: 0;
     margin: 0;
-
 }
 
 .bubbleRandom {
@@ -275,16 +278,16 @@ input[submit] {
     width: 70%;
     margin-right: 30%;
     margin-bottom: 2%;
-
 }
 
 .bubbleRandom p {
     width: 70%;
-    background-color: var(--crème);
+    background-color: var(--creme);
     padding: 2%;
     text-align: justify;
     height: fit-content;
     border-radius: 0px 8px 8px 8px;
+    filter:var(--bubbleShadow);
 }
 
 .content {
@@ -295,13 +298,13 @@ input[submit] {
     align-items: center;
 }
 
+.liam_pdp {
+    margin-right: 4vw;
+}
+
 .random_pdp {
     margin-left: 4vw;
     order: -1;
-}
-
-.liam_pdp {
-    margin-right: 4vw;
 }
 
 .liam_pdp,
@@ -310,14 +313,16 @@ input[submit] {
     background-color: var(--grisViolet);
     width: 7vw;
     height: 14vh;
+    border:1px solid black;
 }
 
 .bubbleLiam p {
     width: 70%;
-    background-color: var(--crème);
+    background-color: var(--creme);
     padding: 2%;
     text-align: right;
     border-radius: 8px 0px 8px 8px;
+    filter:var(--bubbleShadow);
 }
 
 /* Mise en forme des bulles informatives */
@@ -326,11 +331,11 @@ input[submit] {
     text-align: center;
     font-style: italic;
     margin: auto;
-    color: var(--crème);
+    color: var(--creme);
     width: 50%;
     height: fit-content;
     background-color: var(--violet);
-
+    filter:var(--bubbleShadow);
 }
 
 .chapter {
@@ -404,7 +409,7 @@ button {
     padding: 1%;
     width: 50vw;
     height: auto;
-    background-color: var(--crème);
+    background-color: var(--creme);
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 

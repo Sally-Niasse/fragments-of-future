@@ -155,12 +155,12 @@
           id_suivant = idSuivant;
           scrollDown();
           console.log(id_suivant);
+          
 
 
         } else {
           var lastBubble = document.querySelector(".gamespace").lastElementChild;
           id_suivant = lastBubble.dataset.suiv;
-          scrollDown();
           console.log(id_suivant);
         }
 
