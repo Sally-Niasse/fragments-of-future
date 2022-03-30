@@ -243,11 +243,6 @@ h3 {
     justify-content: center;
 }
 
-.bubbleChoice a {
-    color: black;
-    text-decoration: none;
-}
-
 .bubbleChoice p {
     width: 50%;
     background-color: var(--creme);
@@ -257,6 +252,7 @@ h3 {
     border-radius: 20px 5px 20px 5px;
     border:7px double var(--creme);
     cursor:pointer;
+    pointer-events: auto;
     filter:var(--bubbleShadow);
 }
 
@@ -331,6 +327,7 @@ input[submit] {
     text-align: center;
     font-style: italic;
     margin: auto;
+    margin-bottom: 2%;
     color: var(--creme);
     width: 50%;
     height: fit-content;
@@ -353,7 +350,7 @@ input[submit] {
     background-color: rgba(0, 0, 0, 0.6);
     top: 0px;
     right: 0px;
-    transition: ease-in-out 200ms;
+    transition: ease-in-out 500ms;
     transform: scale(1);
 
 }
