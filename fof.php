@@ -40,13 +40,13 @@
           <div class="info">
             <img src="img/logo/user.png" alt="icone compte utilisateur">
             <p>Votre mail : <?php echo $_SESSION["login"] ?></p>
-            <a href="supp_user.php"> Supprimer mon compte </a>
+            <a href="supp_user.php" alt="Button de suppression de compte"> Supprimer mon compte </a>
             <p><strong> Attention :</strong> <br>
               En cliquant sur ce boutton nous supprimerons tout information vous concernant.
               Vous perdrez instantannément votre progression et devrez créer un compte à nouveau afin de recommencer une partie.</p>
           </div>
         </div>
-        <img id="logonav" src="img/logo/fof_logo_final_long_black.png" alt="">
+        <img id="logonav" src="img/logo/fof_logo_final_long_black.png" alt="logo du site">
         <div class="charactersCard">
           <h3>Personnages rencontrés</h3>
           <div class="circle">
@@ -89,9 +89,9 @@
           </div>
         </div>
         <div class="setting">
-          <a href="deconnexion.php"><img src="img/logo/log-out.png" alt=""></a>
-          <img id="user" src="img/logo/user.png" alt="icone compte utilisateur">
-          <a href="https://www.instagram.com/fragmentsoffuture/?hl=fr" target="_blank"><img src="img/logo/instagram.png" alt=""></a>
+          <a href="deconnexion.php"><img src="img/logo/log-out.png" alt="Lien de Déconnexion"></a>
+          <img id="user" src="img/logo/user.png" alt="icone cliquable compte utilisateur">
+          <a href="https://www.instagram.com/fragmentsoffuture/?hl=fr" target="_blank"><img src="img/logo/instagram.png" alt="Lien vers le compte instagram"></a>
         </div>
 
       </nav>
@@ -104,19 +104,19 @@
       <div class="vision">
         <div class="delegue">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/delegue.jpg" alt="">
+          <img src="img/vision/delegue.jpg" alt="Vision de Liam devant le tableau">
         </div>
         <div class="danseur">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/danseur.jpg" alt="">
+          <img src="img/vision/danseur.jpg" alt="Vision Eunji sur scène">
         </div>
         <div class="nanji">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/nanji.jpg" alt="">
+          <img src="img/vision/nanji.jpg" alt="Vision de Eunji et Nathan">
         </div>
         <div class="contrat">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/eunji-contrat.jpg" alt="">
+          <img src="img/vision/eunji-contrat.jpg" alt="Vision de Eunji signant un contrat avec un agent">
         </div>
       </div>
     </div>

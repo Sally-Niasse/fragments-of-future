@@ -83,7 +83,7 @@
     ?>
     <div class="background">
         <div class="container">
-            <a href="index.php"><button class="retour">&larr;</button></a>
+            <a href="index.php" alt="Retour vers l'accueil"><button class="retour">&larr;</button></a>
             <form action="connexion.php" method="POST">
                 <img src="img/logo/fof_logo_final_long_black.png" alt="">
                 <div class="form-group">
@@ -92,12 +92,12 @@
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
                 </div>
-                <p>En vous connectant, vous acceptez de vous conformez à la <a href="mentionlegale.html"> Politique de confidentialité</a> et aux <a href="mentionlegale.html"> Conditions générales</a> de Fragments of Future
+                <p>En vous connectant, vous acceptez de vous conformez à la <a href="mentionlegale.html" alt="Lien vers les mentions légales"> Politique de confidentialité</a> et aux <a href="mentionlegale.html" alt="Lien vers les mentions"> Conditions générales</a> de Fragments of Future
                 </p>
                 <div class="form-group">
                     <input type="submit" value="Connexion">
                 </div>
-                <p>Vous n’êtes pas encore membre ? <a href="inscription.php">Rejoignez-nous</a></p>
+                <p>Vous n’êtes pas encore membre ? <a href="inscription.php" alt="Lien vers l'inscription">Rejoignez-nous</a></p>
             </form>
         </div>
     </div>
