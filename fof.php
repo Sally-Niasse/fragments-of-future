@@ -46,7 +46,7 @@
               Vous perdrez instantannément votre progression et devrez créer un compte à nouveau afin de recommencer une partie.</p>
           </div>
         </div>
-        <img id="logonav" src="img/logo/fof_logo_final_long_black.png" alt="logo du site">
+        <img id="logonav" src="img/logo/fof_logo_final_rectangle_black.png" alt="logo du site">
         <div class="charactersCard">
           <h3>Personnages rencontrés</h3>
           <div class="circle">

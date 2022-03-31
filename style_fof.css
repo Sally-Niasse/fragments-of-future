@@ -49,8 +49,8 @@ nav {
 }
 
 #logonav {
-    width: 50%;
-    margin-left: 25%;
+    width: 40%;
+    margin-left: 30%;
 }
 
 h2 {
@@ -418,7 +418,7 @@ button {
 /* Media queries */
 @media screen and (max-width: 1000px) {
     #logonav {
-        width: 60%
+        width: 50%
     }
 
     .pnj {
@@ -457,8 +457,8 @@ button {
     }
 
     #logonav {
-        width: 40%;
-        margin-left: 30%;
+        width: 30%;
+        margin-left: 40%;
     }
 
     h3 {

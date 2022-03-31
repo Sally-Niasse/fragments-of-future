@@ -333,8 +333,7 @@ form span {
     font-size: 1.2rem;
 }
 
-.form-group,
-.form-group2 {
+.form-group {
     text-align: center;
     margin-bottom: 5%;
 
@@ -351,16 +350,11 @@ form span {
     cursor: pointer;
 }
 
-input,
-.form-group2 input {
+input {
     border: solid #B3B3B3 2px;
     border-radius: 5px;
     background-color: #DFDFDF;
     width: 80%;
-    height: 8%;
-}
-
-.form-group2 input {
     padding: 4%;
 }
 
@@ -437,10 +431,18 @@ main{
     width: 50%;
     margin: auto;
     text-align: justify;
-    margin-bottom: 5%;
+    padding: 2%;
+    border-left:7px double var(--crème);
+    border-right:7px double var(--crème);
+    background-color: var(--softViolet);
 }
 main h1{
     text-align: center;
+}
+main img{
+    width: 30%;
+    display: block;
+margin: auto;
 }
 
 
@@ -497,12 +499,11 @@ main h1{
         margin-top: 12vh;
     }
 
-    input,
-    .form-group2 input {
+   .form-group input {
         height: 7%;
     }
 
-    .form-group2 input {
+    .form-group input {
         padding: 4%;
     }
 
@@ -661,6 +662,12 @@ main h1{
     }
     main{
         width: 90%;
+        padding-bottom: 5%;
+
+    }
+    main img{
+        width: 60%;
+    
     }
     .home{
         background-image: url("./img/logo/cracks_light.png");
@@ -676,8 +683,6 @@ main h1{
     footer img{
         width: 10%;
     }
-    #background-img {
-       display: none;
-    }
+ 
 
 }

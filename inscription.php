@@ -49,16 +49,16 @@
             <a href="javascript:history.back()"><button class="retour">&larr;</button><a>
                     <form action="inscription_traitement.php" method="POST">
                         <img src="img/logo/fof_logo_final_long_black.png" alt="logo du site">
-                        <div class="form-group2">
+                        <div class="form-group">
                             <input type="email" name="mail" placeholder="Email" required="required" autocomplete="off">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group">
                             <input type="password" name="password"  placeholder="Mot de passe" required="required" autocomplete="off">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group">
                             <input type="password" name="password_retype"  placeholder="Retapez votre mot de passe" required autocomplete="off">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group">
                             <input type="submit" value="Inscription">
                         </div>
                     </form>
