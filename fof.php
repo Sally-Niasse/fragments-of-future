@@ -27,7 +27,7 @@
     <div class="container">
       <div class="endgame">
         <div>
-          <h2> Vous avez atteint le dernier chapitre, merci de patienter jusque la prochaine mise à jour !</h2>
+          <h2> Vous avez atteint le dernier dialogue, merci de patienter jusque la prochaine mise à jour !</h2>
           <p>Vous serez avertis sur notre compte instagram de l'arrivé des chapitres suivants</p>
           <p><a href="deconnexion.php">Retour à l'accueil</a></p>
         </div>
@@ -104,19 +104,19 @@
       <div class="vision">
         <div class="delegue">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/delegue.jpg" alt="Vision de Liam devant le tableau">
+          <img src="img/vision/delegue.webp" alt="Vision de Liam devant le tableau">
         </div>
         <div class="danseur">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/danseur.jpg" alt="Vision Eunji sur scène">
+          <img src="img/vision/danseur.webp" alt="Vision Eunji sur scène">
         </div>
         <div class="nanji">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/nanji.jpg" alt="Vision de Eunji et Nathan">
+          <img src="img/vision/nanji.webp" alt="Vision de Eunji et Nathan">
         </div>
         <div class="contrat">
           <button id="close-btn" class="close-button">&times;</button>
-          <img src="img/vision/eunji-contrat.jpg" alt="Vision de Eunji signant un contrat avec un agent">
+          <img src="img/vision/eunji-contrat.webp" alt="Vision de Eunji signant un contrat avec un agent">
         </div>
       </div>
     </div>
@@ -191,35 +191,32 @@
             //changement des BG en fonction des ids
 
             if (id <= 5 || id > 278 && id <= 297) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/chambre.jpg')";
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/chambre.webp')";
            
             }
             if (id > 5 && id <= 24 || id > 81 && id <= 116 || id > 246 && id <= 252 || id > 335 && id <= 346) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/classe.jpg')";
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/classe.webp')";
             
             }
 
             if (id > 24 && id <= 43 || id > 346 && id <= 389) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/lycee.jpg')";
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/lycee.webp')";
             }
 
             if (id > 43 && id <= 81 || id > 116 && id <= 137) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/toilette.jpg')";
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/toilette.webp')";
             }
 
             if (id > 137 && id <= 246) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/appart.jpg')";
-              console.log("appartement de noona")
-              console.log(id)
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/appart.webp')";
             }
 
             if (id > 252 && id <= 278) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/gymnase_nuit.jpg')";
-              console.log("gymnase de nuit")
-              console.log(id)
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/gymnase_nuit.webp')";
+     
             }
             if (id > 297 && id <= 335) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/rue.jpg')";
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/rue.webp')";
             
             }
 

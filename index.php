@@ -101,7 +101,7 @@
     </div>
 
     <img id="frag1" class="fragments" src="img/perso/medium/eunji_medium.png" alt="">
-    <img id="frag2" class="fragments" src="img/vision/medium/danseur_medium.jpg" alt="">
+    <img id="frag2" class="fragments" src="img/vision/medium/danseur_medium.webp" alt="">
     <img id="frag3" class="fragments" src="img/perso/medium/alice_medium.png" alt="">
     <img id="frag4" class="fragments" src="./img/perso/medium/bloup_medium.png"  alt="">
     <div id="background-img"></div>

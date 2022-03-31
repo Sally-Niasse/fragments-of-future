@@ -37,7 +37,7 @@ body {
 #open-menu {
     display: none;
     transition: linear 400ms;
-    z-index: 5;
+    z-index: 25;
 
 }
 
@@ -45,7 +45,6 @@ nav {
     width: 33.333%;
     background-color: var(--violet);
     height: 100vh;
-    /* border-right:2px solid var(--creme); */
     filter:drop-shadow(0px 1px 3px rgb(56, 56, 56));
 }
 
@@ -153,18 +152,17 @@ h3 {
 .user {
     left: 0;
     top: 0;
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 30vw;
     height: 100vh;
     background-color: var(--violet);
-    z-index: 10;
+    z-index: 50;
 }
 
 .info {
     width: 90%;
     transform: translate(0%, 50%);
     margin: auto;
-    /* background-color: #716F6F; */
     text-align: center;
     height: auto;
 }
@@ -197,7 +195,7 @@ h3 {
 /*Espace de principal*/
 .gamespace {
     width: 77%;
-    background-image: url("img/bg/chambre.jpg");
+    background-image: url("img/bg/chambre.webp");
     background-size: contain;
     background-repeat: round;
     display: flex;
@@ -449,9 +447,13 @@ button {
         left: -100vw;
         height: 100vh;
         width: 100%;
-        z-index: 15;
+        z-index: 20;
         transition: linear 500ms;
         overflow-y: scroll;
+    }
+    .user {
+        width: 100vw;
+        height: 100vh;
     }
 
     #logonav {
