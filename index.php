@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <!-- General -->
     <meta charset="UTF-8">
@@ -24,8 +24,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="app.js" defer></script>
 
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/e6c960569c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -139,7 +137,7 @@
             </div>
 
             <div class="fof-card" alt="">
-                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
                 <h2>Un projet</h2>
                 <p>Le défi de 5 étudiants, réalisé en 6 mois seulement</p>
             </div>
