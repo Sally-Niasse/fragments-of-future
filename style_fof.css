@@ -449,6 +449,7 @@ button {
         left: -100vw;
         height: 100vh;
         width: 100%;
+        z-index: 15;
         transition: linear 500ms;
         overflow-y: scroll;
     }

@@ -104,7 +104,7 @@
     <img id="frag2" class="fragments" src="img/vision/danseur.jpg">
     <img id="frag3" class="fragments" src="img/perso/alice.png">
     <img id="frag4" class="fragments" src="img/perso/bloup.png">
-    <img id="background-img" src="./img/logo/cracks.png">
+    <div id="background-img"></div>
 
     <section class="home">
         <div class="home-containt">
@@ -162,6 +162,27 @@
                 personnages, déduisez la meilleure manière de leur venir en aide dans leur problème du quotidien.</p>
         </div>
     </section>
+    <footer>
+        Fragements of Future ©
+        <div class="foot">
+
+            <div>
+                Nos réseaux <br>
+                <a target="_blank" href="https://www.linkedin.com/company/multimedia-playing-game/about/?viewAsMember=true" alt="Redirection vers notre Instagram">
+                    <img src="img/logo/instagram.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a target="_blank" href="mentionlegale.html" alt="Vers compte Instagram de Multimedia Playing Game">
+                    Mention Légale
+                </a>
+
+            </div>
+        </div>
+
+
+
+    </footer>
 
 </body>
 

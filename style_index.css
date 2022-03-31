@@ -26,8 +26,6 @@ h2 {
 }
 
 .home {
-    background-size: cover;
-    background-position: center;
     height: 110vh;
     width: 90vw;
     display: flex;
@@ -41,6 +39,10 @@ h2 {
     top: -20vh;
     z-index: -1;
     width: 100vw;
+    height:120vh;
+    background-image:url('./img/logo/cracks.png');
+    background-size:cover;
+    background-position:center;
     animation: 5s cracks alternate ease-in-out infinite;
 }
 
@@ -397,6 +399,39 @@ form a:hover {
     color: #000;
 }
 
+/* FOOTER */
+
+footer {
+    padding-top:5vh;
+    padding-bottom:2vh;
+    font-size:.8rem;
+    letter-spacing:3px;
+    opacity:0.5;
+    text-align: center;
+
+}
+footer .foot{
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+
+}
+.foot div{
+    width: 20%;
+}
+footer a {
+    color : #000;
+    text-decoration: none;
+}
+footer a:hover {
+    color : var(--crème);
+    transition: 200ms ease-in-out;
+    text-decoration: none;
+}
+footer img{
+    width: 20%;
+    opacity: 0.8;
+}
 /*Mention Légale */
 main{
     width: 50%;
@@ -407,8 +442,6 @@ main{
 main h1{
     text-align: center;
 }
-
-
 
 
 /*Reset mot de passe*/
@@ -629,9 +662,22 @@ main h1{
     main{
         width: 90%;
     }
-    /* #background-img {
-        top: 0;
-        width: 100vw;
-    } */
+    .home{
+        background-image: url("./img/logo/cracks_light.png");
+        background-size: cover;
+        background-position: center;
+    }
+    .foot{
+        margin-top: 5%;
+    }
+    .foot div{
+        width: 70%;
+    }
+    footer img{
+        width: 10%;
+    }
+    #background-img {
+       display: none;
+    }
 
 }
