@@ -163,7 +163,7 @@
         </div>
     </section>
     <footer>
-        Fragements of Future ©
+        Fragments of Future ©
         <div class="foot">
 
         <div>
