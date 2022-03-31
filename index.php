@@ -147,7 +147,7 @@
 
     <section class="pres-box">
         <div class="pres-gallery">
-            <img class="pres-img" src="./img/bg/classe.jpg" alt="">
+            <img class="pres-img" src="./img/bg/classe.webp" alt="">
             <div class="pres-rectangle"></div>
         </div>
 
