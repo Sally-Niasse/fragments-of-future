@@ -239,9 +239,9 @@ h2 {
 
 }
 
-.fof-card h3 {
+.fof-card h2 {
     font-size: 2rem;
-}
+    font-family: 'Ropa Sans', sans-serif;}
 
 .fof-bubble {
     width: 4rem;

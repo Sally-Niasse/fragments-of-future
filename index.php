@@ -117,30 +117,30 @@
 
     <section class="fof-box">
         <h1>Fragments of Future</h1>
-        <h3>Qu'est-ce que c'est ?</h3>
+        <h2>Qu'est-ce que c'est ?</h2>
 
         <div class="fof-gallery">
             <div class="fof-card">
                 <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
-                <h3>Un visual Novel</h3>
+                <h2>Un visual Novel</h2>
                 <p>Vous y serez capable de décider du destin des personnages</p>
             </div>
 
             <div class="fof-card">
                 <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
-                <h3>Une histoire</h3>
+                <h2>Une histoire</h2>
                 <p> Celle de Liam, un lycéen pas si ordinaire, et de son don de voyance</p>
             </div>
 
             <div class="fof-card">
                 <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
-                <h3>Des personnages</h3>
+                <h2>Des personnages</h2>
                 <p>Liam, sa classe, et peut-être même un chat liquide, qui sait ?</p>
             </div>
 
             <div class="fof-card" alt="">
                 <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
-                <h3>Un projet</h3>
+                <h2>Un projet</h2>
                 <p>Le défi de 5 étudiants, réalisé en 6 mois seulement</p>
             </div>
 
@@ -175,7 +175,7 @@
             </a>
         </div>
         <div>
-            <a target="_blank" href="mentionlegale.html" alt="Vers compte Instagram de Multimedia Playing Game">
+            <a target="_blank" href="mentionlegale.html" alt="Lien vers les mentions légales">
                 Mention Légale
             </a>
 
