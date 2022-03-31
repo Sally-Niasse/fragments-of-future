@@ -170,7 +170,7 @@
             var contenu = data[0];
             var choix = data[1];
             var id = data[2];
-            console.log(message);
+            // console.log(message);
             id_suivant = id;
             $(".gamespace").append(contenu, choix);
 
@@ -192,19 +192,15 @@
 
             if (id <= 5 || id > 278 && id <= 297) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/chambre.jpg')";
-              console.log("chambre de Liam");
-              console.log(id)
+           
             }
             if (id > 5 && id <= 24 || id > 81 && id <= 116 || id > 246 && id <= 252 || id > 335 && id <= 346) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/classe.jpg')";
-              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
-              console.log("salle de classe")
-              console.log(id)
+            
             }
 
             if (id > 24 && id <= 43 || id > 346 && id <= 389) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/lycee.jpg')";
-              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
             }
 
             if (id > 43 && id <= 81 || id > 116 && id <= 137) {
@@ -213,21 +209,18 @@
 
             if (id > 137 && id <= 246) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/appart.jpg')";
-              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
               console.log("appartement de noona")
               console.log(id)
             }
 
             if (id > 252 && id <= 278) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/gymnase_nuit.jpg')";
-              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
               console.log("gymnase de nuit")
               console.log(id)
             }
             if (id > 297 && id <= 335) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/rue.jpg')";
-              console.log("");
-              console.log(id)
+            
             }
 
 
@@ -251,7 +244,7 @@
             }
 
             //Fin de jeu 
-            if (id == 389) {
+            if (id == 377) {
               document.querySelector(".endgame").style.display = "block";
               document.querySelector(".gamespace").style.pointerEvents = "none";
 
