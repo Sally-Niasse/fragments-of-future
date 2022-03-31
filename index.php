@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="img/logo/fof_logo_final.png" />
     <title>Fragments of Future : Accueil</title>
 
+    <meta name="description" content="Page d'accueil du visual novel Fragments of Future. Découvrez le projet Fragments of Future"> 
+
     <!-- Imports -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -20,7 +22,7 @@
 
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/e6c960569c.js" crossorigin="anonymous"></script>
@@ -85,12 +87,12 @@
             <form action="connexion.php" method="POST">
                 <img src="img/logo/fof_logo_final_long_black.png" alt="">
                 <div class="form-group">
-                    <input type="email" name="mail" placeholder="Mail" required>
+                    <input type="mail" name="mail" placeholder="Mail" required>
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Mot de passe" required autocomplete="off">
                 </div>
-                <p>En vous connectant, vous acceptez de vous conformez à la <a href="mentionlegale.html" target="_blank"> Politique de confidentialité</a> et aux <a href="mentionlegale.html" target="_blank"> Conditions générales</a> de Fragments of Future
+                <p>En vous connectant, vous acceptez de vous conformez à la <a href="mentionlegale.html"> Politique de confidentialité</a> et aux <a href="mentionlegale.html"> Conditions générales</a> de Fragments of Future
                 </p>
                 <div class="form-group">
                     <input type="submit" value="Connexion">
@@ -100,10 +102,10 @@
         </div>
     </div>
 
-    <img id="frag1" class="fragments" src="img/perso/eunji.png">
-    <img id="frag2" class="fragments" src="img/vision/danseur.jpg">
-    <img id="frag3" class="fragments" src="img/perso/alice.png">
-    <img id="frag4" class="fragments" src="img/perso/bloup.png">
+    <img id="frag1" class="fragments" src="img/perso/medium/eunji_medium.png" alt="">
+    <img id="frag2" class="fragments" src="img/vision/medium/danseur_medium.jpg" alt="">
+    <img id="frag3" class="fragments" src="img/perso/medium/alice_medium.png" alt="">
+    <img id="frag4" class="fragments" src="./img/perso/medium/bloup_medium.png"  alt="">
     <div id="background-img"></div>
 
     <section class="home">
@@ -119,24 +121,24 @@
 
         <div class="fof-gallery">
             <div class="fof-card">
-                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
                 <h3>Un visual Novel</h3>
                 <p>Vous y serez capable de décider du destin des personnages</p>
             </div>
 
             <div class="fof-card">
-                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
                 <h3>Une histoire</h3>
                 <p> Celle de Liam, un lycéen pas si ordinaire, et de son don de voyance</p>
             </div>
 
             <div class="fof-card">
-                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
+                <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png" alt="">
                 <h3>Des personnages</h3>
                 <p>Liam, sa classe, et peut-être même un chat liquide, qui sait ?</p>
             </div>
 
-            <div class="fof-card">
+            <div class="fof-card" alt="">
                 <img class="fof-bubble" src="https://cdn.discordapp.com/attachments/863043594951720995/957718413046857808/unknown.png">
                 <h3>Un projet</h3>
                 <p>Le défi de 5 étudiants, réalisé en 6 mois seulement</p>
@@ -166,20 +168,20 @@
         Fragements of Future ©
         <div class="foot">
 
-            <div>
-                Nos réseaux <br>
-                <a target="_blank" href="https://www.linkedin.com/company/multimedia-playing-game/about/?viewAsMember=true" alt="Redirection vers notre Instagram">
-                    <img src="img/logo/instagram.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a target="_blank" href="mentionlegale.html" alt="Vers compte Instagram de Multimedia Playing Game">
-                    Mention Légale
-                </a>
-
-            </div>
+        <div>
+            Nos réseaux <br>
+            <a target="_blank" href="https://www.linkedin.com/company/multimedia-playing-game/about/?viewAsMember=true" alt="Redirection vers notre Instagram">
+                <img src="img/logo/instagram.png" alt="">
+            </a>
         </div>
+        <div>
+            <a target="_blank" href="mentionlegale.html" alt="Vers compte Instagram de Multimedia Playing Game">
+                Mention Légale
+            </a>
 
+        </div>
+        </div>
+       
 
 
     </footer>

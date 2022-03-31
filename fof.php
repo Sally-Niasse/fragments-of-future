@@ -2,23 +2,19 @@
 <html lang="fr">
 
 <head>
-   <!-- General -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="img/logo/fof_logo_final.png" />
-
-    <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style_fof.css">
-
-   <!-- Script -->
   <script src="vendors/jquery/jquery-3.4.1.min.js"></script>
   <script src="app.js"></script>
   <title>Fragments of Future</title>
+  <meta name="description" content="Page de jeu du visual novel Fragments of Future. Déroulemeent du récit à travers le  clic">
 </head>
 
 <body>
@@ -29,7 +25,6 @@
 
 
     <div class="container">
-         <!--- Lorsque l'on arrive à la dernière bulle --->
       <div class="endgame">
         <div>
           <h2> Vous avez atteint le dernier chapitre, merci de patienter jusque la prochaine mise à jour !</h2>
@@ -37,8 +32,6 @@
           <p><a href="deconnexion.php">Retour à l'accueil</a></p>
         </div>
       </div>
-
-         <!--- Menu  --->
       <button id="open-menu" class="close-button">&equiv;</button>
       <button id="close-menu" class="close-button">&times;</button>
       <nav>
@@ -100,8 +93,8 @@
           <img id="user" src="img/logo/user.png" alt="icone compte utilisateur">
           <a href="https://www.instagram.com/fragmentsoffuture/?hl=fr" target="_blank"><img src="img/logo/instagram.png" alt=""></a>
         </div>
+
       </nav>
-      <!--- Espace principal --->
       <div id="gamespace" class="gamespace">
         <div class="start recit" id="" data-suiv="<?php echo $_SESSION["save"] ?>">
           <p>Pour suivre l'histoire, cliquez sur l'écran et une bulle de dialogue apparaîtra. Lorsque que plusieurs bulles appraissent les unes à côté des autres, ce sont des choix. Sélectionnez-en une pour prendre l'embranchement de votre choix.<br> Amusez vous bien !</p>
@@ -135,6 +128,8 @@
       function scrollDown() {
         gamespace.scrollTop = gamespace.scrollHeight;
 
+        // gamespace.scrollTop.style.transition="ease-in-out 200ms";
+
       }
       // Compteur qui efface les premières bulles
       $(".gamespace").on("click", function() {
@@ -142,6 +137,7 @@
 
         if (compteur >= 10) {
           $(".gamespace div").first().remove();
+          scrollDown()
         }
       });
 
@@ -149,22 +145,23 @@
       var id_suivant = 1;
 
       $(".gamespace").on("click", function(e) {
-        //récupération des attributs "suiv" des dernières bulles
         if (e.target.classList.contains("choice")) {
           var idSuivant = e.target.dataset.suiv;
           id_suivant = idSuivant;
           scrollDown();
           console.log(id_suivant);
-          
 
 
         } else {
           var lastBubble = document.querySelector(".gamespace").lastElementChild;
           id_suivant = lastBubble.dataset.suiv;
+          scrollDown();
+
           console.log(id_suivant);
         }
 
-        //Appel de l'API 
+
+
         $.get("api_dialogue.php", {
             "id_suivant": id_suivant
           }, "json")
@@ -192,17 +189,22 @@
             }
 
             //changement des BG en fonction des ids
+
             if (id <= 5 || id > 278 && id <= 297) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/chambre.jpg')";
-           
+              console.log("chambre de Liam");
+              console.log(id)
             }
             if (id > 5 && id <= 24 || id > 81 && id <= 116 || id > 246 && id <= 252 || id > 335 && id <= 346) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/classe.jpg')";
-        
+              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+              console.log("salle de classe")
+              console.log(id)
             }
 
             if (id > 24 && id <= 43 || id > 346 && id <= 389) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/lycee.jpg')";
+              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
             }
 
             if (id > 43 && id <= 81 || id > 116 && id <= 137) {
@@ -211,16 +213,21 @@
 
             if (id > 137 && id <= 246) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/appart.jpg')";
-        
+              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+              console.log("appartement de noona")
+              console.log(id)
             }
 
-            if (id > 253 && id <= 246) {
-              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/gymnase-nuit.jpg')";
-             
+            if (id > 252 && id <= 278) {
+              document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/gymnase_nuit.jpg')";
+              // document.querySelector(".gamespace").style.transition="ease-in-out 100ms"
+              console.log("gymnase de nuit")
+              console.log(id)
             }
             if (id > 297 && id <= 335) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/rue.jpg')";
-             
+              console.log("");
+              console.log(id)
             }
 
 
@@ -236,21 +243,19 @@
               document.querySelector(".delegue").style.display = "block";
 
             }
-            
+
             if (id == 342) {
               document.querySelector(".vision").style.display = "block";
               document.querySelector(".contrat").style.display = "block";
 
             }
 
-            //Fin de jeu provisoire
+            //Fin de jeu 
             if (id == 389) {
               document.querySelector(".endgame").style.display = "block";
-              document.querySelector(".gamespace"). style.pointerEvents="none";
+              document.querySelector(".gamespace").style.pointerEvents = "none";
 
             }
-
-
 
           })
 
