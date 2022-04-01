@@ -123,12 +123,12 @@
 
     <script>
       var gamespace = document.getElementById("gamespace");
+      var gamespacePointer = document.getElementById("gamespace").style.pointerEvents;
+
       var compteur = 0;
 
       function scrollDown() {
         gamespace.scrollTop = gamespace.scrollHeight;
-
-        // gamespace.scrollTop.style.transition="ease-in-out 200ms";
 
       }
       // Compteur qui efface les premières bulles
@@ -145,21 +145,25 @@
       var id_suivant = 1;
 
       $(".gamespace").on("click", function(e) {
+
         if (e.target.classList.contains("choice")) {
+
           var idSuivant = e.target.dataset.suiv;
           id_suivant = idSuivant;
           scrollDown();
-          console.log(id_suivant);
+
 
 
         } else {
+          gamespacePointer = "auto"
+
           var lastBubble = document.querySelector(".gamespace").lastElementChild;
           id_suivant = lastBubble.dataset.suiv;
           scrollDown();
 
-          console.log(id_suivant);
-        }
 
+
+        }
 
 
         $.get("api_dialogue.php", {
@@ -192,11 +196,11 @@
 
             if (id <= 5 || id > 278 && id <= 297) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/chambre.webp')";
-           
+
             }
             if (id > 5 && id <= 24 || id > 81 && id <= 116 || id > 246 && id <= 252 || id > 335 && id <= 346) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/classe.webp')";
-            
+
             }
 
             if (id > 24 && id <= 43 || id > 346 && id <= 389) {
@@ -213,28 +217,31 @@
 
             if (id > 252 && id <= 278) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/gymnase_nuit.webp')";
-     
+
             }
             if (id > 297 && id <= 335) {
               document.querySelector(".gamespace").style.backgroundImage = "url('img/bg/rue.webp')";
-            
+
             }
 
 
             //Apparition des visions
-            if (id == 284) {
-              document.querySelector(".vision").style.display = "block";
-              document.querySelector(".vision").style.transition = "ease-in 1000ms"
-              document.querySelector(".danseur").style.display = "block";
-            }
-
             if (id == 48) {
               document.querySelector(".vision").style.display = "block";
               document.querySelector(".delegue").style.display = "block";
 
             }
 
+            if (id == 284) {
+              document.querySelector(".delegue").style.display = "none";
+              document.querySelector(".vision").style.display = "block";
+              document.querySelector(".danseur").style.display = "block";
+            }
+
+
             if (id == 342) {
+              document.querySelector(".delegue").style.display = "none";
+              document.querySelector(".danseur").style.display = "none";
               document.querySelector(".vision").style.display = "block";
               document.querySelector(".contrat").style.display = "block";
 
