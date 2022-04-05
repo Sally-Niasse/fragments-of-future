@@ -168,7 +168,7 @@
 
         <div>
             Nos réseaux <br>
-            <a target="_blank" href="https://www.linkedin.com/company/multimedia-playing-game/about/?viewAsMember=true" alt="Redirection vers notre Instagram">
+            <a target="_blank" href="https://www.instagram.com/fragmentsoffuture/?utm_medium=copy_link" alt="Redirection vers notre Instagram">
                 <img src="img/logo/instagram.png" alt="">
             </a>
         </div>
